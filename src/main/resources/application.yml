@@ -1,0 +1,52 @@
+spring:
+  datasource:
+    driver-class-name: com.mysql.cj.jdbc.Driver
+    username: root
+    password: 123456
+    url: jdbc:mysql://10.9.1.191/sell?characterEncoding=utf-8&useSSL=false&serverTimezone=Asia/Shanghai
+    type: com.alibaba.druid.pool.DruidDataSource
+    platform: mysql
+      # 下面为连接池的补充设置，应用到上面所有数据源中
+    # 初始化大小，最小，最大
+    driverClassName: com.mysql.cj.jdbc.Driver
+    initialSize: 5
+    minIdle: 5
+    maxActive: 20
+    # 配置获取连接等待超时的时间
+    maxWait: 60000
+    # 配置间隔多久才进行一次检测，检测需要关闭的空闲连接，单位是毫秒
+    timeBetweenEvictionRunsMillis: 60000
+    # 配置一个连接在池中最小生存的时间，单位是毫秒
+    minEvictableIdleTimeMillis: 300000
+  jackson:
+    default-property-inclusion: non_null
+  redis:
+    host: 10.9.1.191
+    port: 6379
+  aop: true
+server:
+  context-path: /sell
+mybatis:
+  mapper-locations: classpath:mapper/*.xml
+  configuration:
+    map-underscore-to-camel-case: true
+  type-aliases-package: cn.zfl.myshop.pojo
+logging:
+  level:
+    cn.zfl.myshop.pojo.mapper: trace
+
+wechat:
+  mpAppId: wxdb23f1a1834b28ff
+  mpAppSecret: 1a13ef5930b0b605321a31d28b7192ae
+  openAppId: wx6ad144e54af67d87
+  AppSecret: 91a2ff6d38a2bbccfb7e9f9079108e2e
+  mchId: 1483469312
+  mchKey: C5245D70627C1F8E9964D494B0735025
+  keyPath: C:/Users/50220/Desktop/h5p/h5.p12
+  notifyUrl: http://zflshop.natapp1.cc/sell/pay/notify
+
+projectUrl:
+  wechatMpAuthorize: http://zflshop.natapp1.cc
+  wechatOpenAuthorize: http://sell.springboot.cn
+  sell: http://zflshop.natapp1.cc
+
