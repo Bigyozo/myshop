@@ -20,6 +20,7 @@ public interface OrderService {
 
     OrderDTO cancel(OrderDTO orderDTO);
 
+    //完成订单
     OrderDTO finish(OrderDTO orderDTO);
 
     OrderDTO paid(OrderDTO orderDTO);

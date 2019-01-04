@@ -9,7 +9,7 @@ import org.springframework.stereotype.Component;
 /**
  * @author zhangfl<br />
  * @program:myshop
- * @Description: <br/>
+ * @Description:微信支付配置 <br/>
  * @create: 2018/12/2 11:19<br/>
  */
 @Component
