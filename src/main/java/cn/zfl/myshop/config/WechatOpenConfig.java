@@ -11,7 +11,7 @@ import org.springframework.stereotype.Component;
 /**
  * @author zhangfl<br   />
  * @program:myshop
- * @Description: 开放平台配置<br/>
+ * @Description: <br/>
  * @create: 2018/12/25 18:25<br/>
  */
 @Component

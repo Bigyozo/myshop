@@ -20,7 +20,7 @@ import java.net.URLEncoder;
 /**
  * @author zhangfl<br                               />
  * @program:myshop
- * @Description: 微信授权登陆<br/>
+ * @Description: <br/>
  * @create: 2018/11/29 16:02<br/>
  */
 @Controller
@@ -34,7 +34,6 @@ public class WechatController {
     @Autowired
     private ProjectUrlConfig urlConfig;
 
-    //买家端公众平台授权登陆
     @GetMapping("/authorize")
     public String authorize(@RequestParam("returnUrl") String returnUrl) {
         String url = urlConfig.getWechatMpAuthorize() + "/sell/wechat/userInfo";
@@ -43,7 +42,6 @@ public class WechatController {
         return "redirect:" + redirectUrl;
     }
 
-    //由token换取openid
     @GetMapping("/userInfo")
     public String userInfo(@RequestParam("code") String code,
                            @RequestParam("state") String returnUrl) {
@@ -59,7 +57,6 @@ public class WechatController {
         return "redirect:" + returnUrl + "?openid=" + openid;
     }
 
-    //卖家端开放平台授权登陆
     @GetMapping("/qrAuthorize")
     public String qrAuthorize(@RequestParam("returnUrl") String returnUrl) {
         String url = urlConfig.getWechatOpenAuthorize() + "/sell/wechat/qrUserInfo";
@@ -68,7 +65,6 @@ public class WechatController {
         return "redirect:" + redirectUrl;
     }
 
-    //由token换取openid
     @GetMapping("/qrUserInfo")
     public String qrUserInfo(@RequestParam("code") String code,
                              @RequestParam("state") String returnUrl) {
@@ -81,6 +77,7 @@ public class WechatController {
         }
 
         String openid = wxMpOAuth2AccessToken.getOpenId();
+        //openid="oTgZpwSvK3N4-TrrbQnb4fB3wj5E";
         return "redirect:" + returnUrl + "?openid=" + openid;
     }
 

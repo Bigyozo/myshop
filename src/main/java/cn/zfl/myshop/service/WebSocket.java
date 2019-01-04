@@ -13,7 +13,7 @@ import java.util.concurrent.CopyOnWriteArraySet;
 /**
  * @author zhangfl<br   />
  * @program:myshop
- * @Description:卖家端WebSocket接单通知 <br/>
+ * @Description: <br/>
  * @create: 2018/12/28 22:47<br/>
  */
 @Component

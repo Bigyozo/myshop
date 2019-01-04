@@ -10,7 +10,7 @@ import org.springframework.web.client.RestTemplate;
 /**
  * @author zhangfl<br   />
  * @program:myshop
- * @Description: 测试用微信验证<br/>
+ * @Description: <br/>
  * @create: 2018/11/29 14:28<br/>
  */
 @RestController

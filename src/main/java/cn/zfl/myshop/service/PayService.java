@@ -16,6 +16,5 @@ public interface PayService {
 
     PayResponse notify(String notifyData);
 
-    //退款
     RefundResponse refund(OrderDTO orderDTO);
 }
