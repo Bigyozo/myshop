@@ -27,8 +27,8 @@ public class WechatPayConfig {
     @Bean
     public WxPayH5Config wxPayH5Config(){
         WxPayH5Config wxPayH5Config = new WxPayH5Config();
-        //微信借号支付
-        wxPayH5Config.setAppId("wxd898fcb01713c658");
+        //wxPayH5Config.setAppId("wxd898fcb01713c658");
+        wxPayH5Config.setAppId(accountConfig.getMpAppId());
         wxPayH5Config.setAppSecret(accountConfig.getMpAppSecret());
         wxPayH5Config.setMchId(accountConfig.getMchId());
         wxPayH5Config.setMchKey(accountConfig.getMchKey());

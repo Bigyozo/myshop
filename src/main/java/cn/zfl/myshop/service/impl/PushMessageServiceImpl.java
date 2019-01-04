@@ -29,8 +29,9 @@ public class PushMessageServiceImpl implements PushMessageService {
     public void orderStatus(OrderDTO orderDTO) {
         WxMpTemplateMessage templateMessage =new WxMpTemplateMessage();
         templateMessage.setTemplateId("V0d0UZqkZHMdyxIP93vD7sgj_qCDKxNtgh8TYHqtubY");
-        //templateMessage.setToUser(orderDTO.getBuyerOpenid());
-        templateMessage.setToUser("oQFsx1bpXsI_zDGS9Dms4QNoTLYA");
+        templateMessage.setToUser(orderDTO.getBuyerOpenid());
+        //测试时使用测试号openid
+        //templateMessage.setToUser("oQFsx1bpXsI_zDGS9Dms4QNoTLYA");
 
         List<WxMpTemplateData> data = Arrays.asList(
                 new WxMpTemplateData("first", "亲，请记得收货。"),

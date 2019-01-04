@@ -27,13 +27,9 @@ spring:
 server:
   context-path: /sell
 mybatis:
-  mapper-locations: classpath:mapper/*.xml
   configuration:
     map-underscore-to-camel-case: true
   type-aliases-package: cn.zfl.myshop.pojo
-logging:
-  level:
-    cn.zfl.myshop.pojo.mapper: trace
 
 wechat:
   mpAppId: wxdb23f1a1834b28ff

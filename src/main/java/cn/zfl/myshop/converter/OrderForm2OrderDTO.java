@@ -28,9 +28,9 @@ public class OrderForm2OrderDTO {
         orderDTO.setBuyerName(orderForm.getName());
         orderDTO.setBuyerPhone(orderForm.getPhone());
         orderDTO.setBuyerAddress(orderForm.getAddress());
-       // orderDTO.setBuyerOpenid(orderForm.getOpenid());
-       //借号调试支付功能，写死openid
-        orderDTO.setBuyerOpenid("oTgZpwSvK3N4-TrrbQnb4fB3wj5E");
+        orderDTO.setBuyerOpenid(orderForm.getOpenid());
+        //借号调试支付功能，写死openid
+        //orderDTO.setBuyerOpenid("oTgZpwSvK3N4-TrrbQnb4fB3wj5E");
         List<OrderDetail> orderDetailList =new ArrayList<>();
         try {
             orderDetailList=gson.fromJson(orderForm.getItems(),

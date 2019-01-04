@@ -38,7 +38,7 @@ public class BuyerServiceImpl implements BuyerService {
 
     private OrderDTO checkOrderOwner(String openid, String orderId) {
         //联通测试写死openid
-        openid="oTgZpwSvK3N4-TrrbQnb4fB3wj5E";
+       // openid="oTgZpwSvK3N4-TrrbQnb4fB3wj5E";
         OrderDTO orderDTO = orderService.getOne(orderId);
         if (orderDTO == null) {
             return null;
