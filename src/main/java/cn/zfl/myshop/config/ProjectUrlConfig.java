@@ -19,6 +19,6 @@ public class ProjectUrlConfig {
     public String wechatMpAuthorize;
     //开放平台url
     public String wechatOpenAuthorize;
-
+    //主机url
     public String sell;
 }

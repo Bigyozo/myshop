@@ -69,4 +69,3 @@ create table `seller_info` (
     primary key (`id`)
 ) comment '卖家信息表';
 
-```

@@ -22,7 +22,6 @@ public class CommonConfig {
         p.setProperty("rowBoundsWithCount", "true");
         p.setProperty("dialect", "mysql");
         p.setProperty("supportMethodsArguments", "true");
-      //  p.setProperty("returnPageInfo", "check");
         p.setProperty("reasonable", "true");
         p.setProperty("params","count=countSql");
         pageHelper.setProperties(p);
