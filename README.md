@@ -5,7 +5,7 @@
 - 支持微信授权登陆，支付与退款及模板消息推送功能。
 ## 上线网址
 [买家端](http://zhangfanglong.cn/)
-[卖家端](http://zhangfanglong.cn/seller/order/list)
+[卖家端](http://zhangfanglong.cn/sell/seller/order/list)
 ***
 ## 项目目录
 │    
