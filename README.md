@@ -7,163 +7,157 @@
 [买家端](http://zhangfanglong.cn/)
 [卖家端](http://zhangfanglong.cn/sell/seller/order/list)
 ## 项目目录
-│    
+│      
 ├─java   
 │　└─cn   
 │　　└─zfl   
 │　　　└─myshop   
 │　　　　│　MyshopApplication.java   
-│　　　　│   
+│　　　　│    
 │　　　　├─aspect   
-│　　　　│　SellerAuthorizeAspect.java   
-│　　　　│       
+│　　　　│　SellerAuthorizeAspect.java　   
+│　　　　│         
 │　　　　├─config   
-│　　　　│　CommonConfig.java  
-│　　　　│　DruidDBConfig.java   
+│　　　　│　CommonConfig.javaMyBatis  
+│　　　　│　DruidDBConfig.java　  
 │　　　　│　ProjectUrlConfig.java  
 │　　　　│　WebSocketConfig.java  
-│　　　　│　WechatAccountConfig.java  
+│　　　　│　WechatAccountConfig.java   
 │　　　　│　WechatMpConfig.java  
-│              │      WechatOpenConfig.java  
-│              │      WechatPayConfig.java  
-│              │      
-│              ├─constant  
-│              │      CookieConstant.java  
-│              │      RedisConstant.java  
-│              │      
-│              ├─controller  
-│              │      BuyerOrderController.java  
-│              │      BuyerProductController.java  
-│              │      PayController.java  
-│              │      SecKillController.java  
-│              │      SellerCategoryController.java  
-│              │      SellerOrderController.java  
-│              │      SellerProductController.java  
-│              │      SellerUserController.java  
-│              │      WechatController.java  
-│              │      WeixinController.java  
-│              │      
-│              ├─converter  
-│              │      OrderForm2OrderDTO.java  
-│              │      OrderMaster2OrderDTO.java  
-│              │       
-│              ├─dto  
-│              │      CartDTO.java  
-│              │      OrderDTO.java  
-│              │      
-│              ├─enums  
-│              │      CodeEnum.java  
-│              │      OrderStatusEnum.java  
-│              │      PayStatusEnum.java  
-│              │      ProductStatusEnum.java  
-│              │      ResultEnum.java  
-│              │      
-│              ├─exception  
-│              │      SellerAuthorizeException.java  
-│              │      SellException.java  
-│              │      
-│              ├─form  
-│              │      CategoryForm.java  
-│              │      OrderForm.java  
-│              │      ProductForm.java  
-│              │      
-│              ├─handler  
-│              │      SellExceptionHandler.java  
-│              │      
-│              ├─pojo  
-│              │  │  OrderDetail.java  
-│              │  │  OrderMaster.java  
-│              │  │  ProductCategory.java  
-│              │  │  ProductInfo.java  
-│              │  │  SellerInfo.java  
-│              │  │    
-│              │  └─mapper  
-│              │          OrderDetailMapper.java  
-│              │          OrderMasterMapper.java  
-│              │          ProductCategoryMapper.java  
-│              │          ProductInfoMapper.java  
-│              │          SellerInfoMapper.java  
-│              │           
-│              ├─service  
-│              │  │  BuyerService.java  
-│              │  │  CategoryService.java  
-│              │  │  OrderService.java  
-│              │  │  PayService.java  
-│              │  │  ProductService.java  
-│              │  │  PushMessageService.java  
-│              │  │  RedisLock.java  
-│              │  │  SecKillService.java  
-│              │  │  SellerService.java  
-│              │  │  WebSocket.java  
-│              │  │   
-│              │  └─impl  
-│              │          BuyerServiceImpl.java  
-│              │          CategoryServiceImpl.java  
-│              │          OrderServiceImpl.java  
-│              │          PayServiceImpl.java  
-│              │          ProductServiceImpl.java  
-│              │          PushMessageServiceImpl.java  
-│              │          SecKillServiceImpl.java  
-│              │          SellerServiceImpl.java  
-│              │          
-│              ├─utils  
-│              │  │  CookieUtil.java  
-│              │  │  EnumUtil.java  
-│              │  │  JsonUtil.java  
-│              │  │  KeyUtil.java  
-│              │  │  ResultVOUtil.java  
-│              │  │   
-│              │  └─serializer  
-│              │          Date2LongSerializer.java  
-│              │          
-│              └─ViewObj  
-│                      ProductInfoVO.java  
-│                      ProductVO.java  
-│                      ResultVO.java  
-│                       
+│　　　　│　WechatOpenConfig.java  
+│　　　　│　WechatPayConfig.java  
+│　　　　│  
+│　　　　├─constant  
+│　　　　│　CookieConstant.java  
+│　　　　│　RedisConstant.java  
+│　　　　│  
+│　　　　├─controller  
+│　　　　│　BuyerOrderController.java  
+│　　　　│　BuyerProductController.java  
+│　　　　│　PayController.java  
+│　　　　│　SecKillController.java  
+│　　　　│　SellerCategoryController.java  
+│　　　　│　SellerOrderController.java  
+│　　　　│　SellerProductController.java  
+│　　　　│　SellerUserController.java  
+│　　　　│　WechatController.java  
+│　　　　│　WeixinController.java  
+│　　　　│  
+│　　　　├─converter  
+│　　　　│　OrderForm2OrderDTO.java  
+│　　　　│　OrderMaster2OrderDTO.java  
+│　　　　│  
+│　　　　├─dto  
+│　　　　│　CartDTO.java  
+│　　　　│　OrderDTO.java  
+│　　　　│  
+│　　　　├─enums  
+│　　　　│　CodeEnum.java  
+│　　　　│　OrderStatusEnum.java  
+│　　　　│　PayStatusEnum.java  
+│　　　　│　ProductStatusEnum.java  
+│　　　　│　ResultEnum.java  
+│　　　　│  
+│　　　　├─exception  
+│　　　　│　SellerAuthorizeException.java  
+│　　　　│　SellException.java  
+│　　　　│  
+│　　　　├─form  
+│　　　　│　CategoryForm.java  
+│　　　　│　OrderForm.java  
+│　　　　│　ProductForm.java  
+│　　　　│  
+│　　　　├─handler  
+│　　　　│　SellExceptionHandler.java  
+│　　　　│  
+│　　　　├─pojo  
+│　　　　│　│　OrderDetail.java  
+│　　　　│　│　OrderMaster.java  
+│　　　　│　│　ProductCategory.java  
+│　　　　│　│　ProductInfo.java  
+│　　　　│　│　SellerInfo.java  
+│　　　　│　│  
+│　　　　│　└─mapper  
+│　　　　│　　OrderDetailMapper.java  
+│　　　　│　　OrderMasterMapper.java  
+│　　　　│　　ProductCategoryMapper.java  
+│　　　　│　　ProductInfoMapper.java  
+│　　　　│　　SellerInfoMapper.java  
+│　　　　│  
+│　　　　├─service  
+│　　　　│　│　BuyerService.java  
+│　　　　│　│　CategoryService.java  
+│　　　　│　│　OrderService.java  
+│　　　　│　│　PayService.java  
+│　　　　│　│　ProductService.java  
+│　　　　│　│　PushMessageService.java  
+│　　　　│　│　RedisLock.java  
+│　　　　│　│　SecKillService.java  
+│　　　　│　│　SellerService.java  
+│　　　　│　│　WebSocket.java  
+│　　　　│　│  
+│　　　　│　└─impl  
+│　　　　│　　BuyerServiceImpl.java  
+│　　　　│　　CategoryServiceImpl.java  
+│　　　　│　　OrderServiceImpl.java  
+│　　　　│　　PayServiceImpl.java  
+│　　　　│　　ProductServiceImpl.java  
+│　　　　│　　PushMessageServiceImpl.java  
+│　　　　│　　SecKillServiceImpl.java  
+│　　　　│　　SellerServiceImpl.java  
+│　　　　│  
+│　　　　├─utils  
+│　　　　│　│　CookieUtil.java  
+│　　　　│　│　EnumUtil.java  
+│　　　　│　│　JsonUtil.java  
+│　　　　│　│　KeyUtil.java  
+│　　　　│　│　ResultVOUtil.java  
+│　　　　│　│  
+│　　　　│　└─serializer  
+│　　　　│　　　Date2LongSerializer.java  
+│　　　　│  
+│　　　　└─ViewObj  
+│　　　　　ProductInfoVO.java  
+│　　　　　ProductVO.java  
+│　　　　　ResultVO.java  
+│  
 └─resources  
-    │  application.yml  
-    │  logback-spring.xml  
-    │   
-    ├─mapper  
-    │      ProductCategory.xml  
-    │      
-    ├─static
-    │  │  pay.html  
-    │  │  
-    │  ├─api  
-    │  │      API.md  
-    │  │      ratings.json  
-    │  │      seller.json  
-    │  │      SQL.md  
-    │  │      
-    │  ├─css  
-    │  │      style.css  
-    │  │      
-    │  └─mp3  
-    │          song.mp3  
-    │          
-    └─templates  
-        ├─category  
-        │      index.ftl  
-        │      list.ftl  
-        │      
-        ├─common  
-        │      error.ftl  
-        │      header.ftl  
-        │      nav.ftl  
-        │      success.ftl  
-        │       
-        ├─order  
-        │      detail.ftl  
-        │      list.ftl  
-        │      
-        ├─pay  
-        │      create.ftl  
-        │      success.ftl  
-        │      
-        └─product  
-                index.ftl  
-                list.ftl
-                
-
+　│　application.yml  
+　│　logback-spring.xml  
+　│    
+　├─static　  
+　│　│  
+　│　├─api  
+　│　│　API.md  
+　│　│　ratings.json  
+　│　│　seller.json  
+　│　│　SQL.md  
+　│　│  
+　│　├─css  
+　│　│　style.css  
+　│　│  
+　│　└─mp3  
+　│　　　song.mp3  
+　│  
+　└─templates  
+　　├─category  
+　　│　index.ftl  
+　　│　list.ftl  
+　　│  
+　　├─common  
+　　│　error.ftl  
+　　│　header.ftl  
+　　│　nav.ftl  
+　　│　success.ftl  
+　　│  
+　　├─order  
+　　│　detail.ftl  
+　　│　list.ftl  
+　　│  
+　　├─pay  
+　　│　create.ftl  
+　　│　success.ftl  
+　　│  
+　　└─product  
+　　　　index.ftl  
+　　　　list.ftl  
