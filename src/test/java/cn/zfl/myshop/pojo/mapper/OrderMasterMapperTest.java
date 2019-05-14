@@ -14,7 +14,7 @@ import java.util.List;
 
 
 @RunWith(SpringRunner.class)
-@SpringBootTest
+@SpringBootTest(webEnvironment = SpringBootTest.WebEnvironment.RANDOM_PORT)
 public class OrderMasterMapperTest {
     @Autowired
     OrderMasterMapper orderMasterMapper;
@@ -22,7 +22,7 @@ public class OrderMasterMapperTest {
     @Test
     public void insert(){
         OrderMaster orderMaster=new OrderMaster();
-        orderMaster.setOrderId("order2");
+        orderMaster.setOrderId("order1");
         orderMaster.setBuyerName("buyer23");
         orderMaster.setBuyerPhone("1232313123");
         orderMaster.setBuyerOpenid("12345");
