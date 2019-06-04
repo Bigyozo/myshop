@@ -5,8 +5,8 @@
 - 买家端通过微信公众平台API实现微信授权登陆，支付与退款及模板消息推送功能。
 - 卖家端使用AOP+Redis实现统一身份验证，通过微信开放平台授权扫码登陆。
 ## 上线网址
-[买家端](http://zhangfanglong.cn/)
-[卖家端](http://zhangfanglong.cn/sell/seller/order/list)
+- [买家端](http://zhangfanglong.cn/)（需在微信下访问）
+- [卖家端](http://zhangfanglong.cn/sell/seller/order/list)
 ## 项目目录
 │      
 ├─java   
