@@ -1,5 +1,6 @@
 package cn.zfl.myshop.service.impl;
 
+import cn.zfl.myshop.aspect.Slave;
 import cn.zfl.myshop.dto.CartDTO;
 import cn.zfl.myshop.enums.ProductStatusEnum;
 import cn.zfl.myshop.enums.ResultEnum;
@@ -28,6 +29,7 @@ public class ProductServiceImpl implements ProductService {
         return mapper.selectByProductStatus(ProductStatusEnum.UP.getCode());
     }
 
+    @Slave
     @Override
     public List<ProductInfo> getAll() {
         return mapper.selectAll();

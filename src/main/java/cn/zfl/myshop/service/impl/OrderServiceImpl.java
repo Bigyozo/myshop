@@ -1,5 +1,6 @@
 package cn.zfl.myshop.service.impl;
 
+import cn.zfl.myshop.aspect.Slave;
 import cn.zfl.myshop.converter.OrderMaster2OrderDTO;
 import cn.zfl.myshop.dto.CartDTO;
 import cn.zfl.myshop.dto.OrderDTO;
@@ -193,6 +194,7 @@ public class OrderServiceImpl implements OrderService {
         return orderDTO;
     }
 
+    @Slave
     @Override
     public List<OrderDTO> getList() {
         List<OrderMaster>orderMasterList=orderMasterMapper.selectAll();

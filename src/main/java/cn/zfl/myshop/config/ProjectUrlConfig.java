@@ -12,7 +12,7 @@ import org.springframework.stereotype.Component;
  * @create: 2018/12/25 22:50<br/>
  */
 @Data
-@ConfigurationProperties(prefix = "projectUrl")
+@ConfigurationProperties(prefix = "project-url")
 @Component
 public class ProjectUrlConfig {
     //公众平台url

@@ -1,5 +1,6 @@
 package cn.zfl.myshop.service.impl;
 
+import cn.zfl.myshop.aspect.Slave;
 import cn.zfl.myshop.pojo.SellerInfo;
 import cn.zfl.myshop.pojo.mapper.SellerInfoMapper;
 import cn.zfl.myshop.service.SellerService;
@@ -17,6 +18,7 @@ public class SellerServiceImpl implements SellerService {
     @Autowired
     private SellerInfoMapper sellerInfoMapper;
 
+    @Slave
     @Override
     public SellerInfo getByOpenid(String openid) {
         return sellerInfoMapper.selectByOpenid(openid);
