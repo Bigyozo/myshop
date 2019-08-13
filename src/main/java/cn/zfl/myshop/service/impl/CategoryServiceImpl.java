@@ -1,5 +1,6 @@
 package cn.zfl.myshop.service.impl;
 
+import cn.zfl.myshop.aspect.Slave;
 import cn.zfl.myshop.pojo.ProductCategory;
 import cn.zfl.myshop.pojo.mapper.ProductCategoryMapper;
 import cn.zfl.myshop.service.CategoryService;
@@ -17,6 +18,7 @@ public class CategoryServiceImpl implements CategoryService {
         return mapper.selectOneByCategoryType(categoryType);
     }
 
+    @Slave
     @Override
     public List<ProductCategory> getAll() {
         return mapper.selectAll();
