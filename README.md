@@ -18,16 +18,16 @@
 │　　　└─myshop   
 │　　　　│　MyshopApplication.java   
 │　　　　│    
-│　　　　├─aspect
-│　　　　│  DataSourceAop.java  
+│　　　　├─aspect    
+│　　　　│　DataSourceAop.java  
 │　　　　│　SellerAuthorizeAspect.java　   
-│　　　　│  Slave.java    
+│　　　　│　Slave.java    
 │　　　　│    
 │　　　　├─config   
 │　　　　│　CommonConfig.java  
-│　　　　│  DataSourceConfig.java    
+│　　　　│　DataSourceConfig.java    
 │　　　　│　DBContextHolder.java  
-│　　　　│  MybatisConfig.java  
+│　　　　│　MybatisConfig.java  
 │　　　　│　MyRoutingDataSource.java  
 │　　　　│　ProjectUrlConfig.java  
 │　　　　│　WebSocketConfig.java  
