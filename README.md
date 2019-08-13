@@ -1,9 +1,12 @@
 # 微信点餐系统
 ## 简介
 - Spring Boot + Mybatis 实现的微信点餐系统，包含买家系统与卖家系统。  
-- 买家端前台使用Vue.js，卖家端前台使用Bootstrap+FreeMarker实现，通过RESTful接口实现前后端分离。  
-- 买家端通过微信公众平台API实现微信授权登陆，支付与退款及模板消息推送功能。
-- 卖家端使用AOP+Redis实现统一身份验证，通过微信开放平台授权扫码登陆。
+- 买家端在微信下访问url登陆后经授权验证，可进行下单、支付、退款等操作。
+- 卖家端通过微信扫码登陆，可进行订单确认与取消、商品信息添加与修改等操作。
+- 买家端前台使用Vue.js，通过json接口实现前后端分离。卖家端前台使用Bootstrap+FreeMarker生成页面。
+- 买家端验证、支付及退款功能由微信公众平台API实现，卖家端扫码登录由微信开放平台API实现，并使用AOP+Redis实现统一身份验证。
+- 数据库通过mysql主从配置实现读写分离。
+
 ## 上线网址
 - [买家端](http://zhangfanglong.cn/)（需在微信下访问）
 - [卖家端](http://zhangfanglong.cn/sell/seller/order/list)
@@ -15,12 +18,17 @@
 │　　　└─myshop   
 │　　　　│　MyshopApplication.java   
 │　　　　│    
-│　　　　├─aspect   
+│　　　　├─aspect
+│　　　　│  DataSourceAop.java  
 │　　　　│　SellerAuthorizeAspect.java　   
-│　　　　│         
+│　　　　│  Slave.java    
+│　　　　│    
 │　　　　├─config   
-│　　　　│　CommonConfig.javaMyBatis  
-│　　　　│　DruidDBConfig.java　  
+│　　　　│　CommonConfig.java  
+│　　　　│  DataSourceConfig.java    
+│　　　　│　DBContextHolder.java  
+│　　　　│  MybatisConfig.java  
+│　　　　│　MyRoutingDataSource.java  
 │　　　　│　ProjectUrlConfig.java  
 │　　　　│　WebSocketConfig.java  
 │　　　　│　WechatAccountConfig.java   
@@ -54,6 +62,7 @@
 │　　　　│  
 │　　　　├─enums  
 │　　　　│　CodeEnum.java  
+│　　　　│　DBTypeEnum.java  
 │　　　　│　OrderStatusEnum.java  
 │　　　　│　PayStatusEnum.java  
 │　　　　│　ProductStatusEnum.java  
