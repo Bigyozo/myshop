@@ -8,10 +8,7 @@ import org.springframework.web.bind.annotation.PathVariable;
 import org.springframework.web.bind.annotation.RequestMapping;
 import org.springframework.web.bind.annotation.RestController;
 
-/**
- * Created by 廖师兄
- * 2017-08-06 23:16
- */
+
 @RestController
 @RequestMapping("/skill")
 @Slf4j
