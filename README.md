@@ -9,7 +9,7 @@
 
 ## 上线网址
 - [买家端](http://zhangfanglong.cn/)（需在微信下访问）
-- [卖家端](http://zhangfanglong.cn/sell/seller/order/list)
+
 ## 项目目录
 │      
 ├─java   
